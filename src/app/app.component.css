@@ -1,0 +1,10 @@
+.footer {
+    background: -webkit-linear-gradient(left, #0888ff, #fff) no-repeat center center fixed;
+    padding: 20px;
+    color: black;
+}
+
+.body {
+    background-color: -webkit-linear-gradient(left, #0888ff, #fff);
+
+}
