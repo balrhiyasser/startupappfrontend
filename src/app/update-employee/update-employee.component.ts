@@ -33,6 +33,7 @@ export class UpdateEmployeeComponent implements OnInit {
       .subscribe(data => console.log(data), error => console.log(error));
     this.employee = new Employee();
     this.gotoList();
+    
   }
 
   onSubmit() {
@@ -40,6 +41,8 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/employees']);
+    setTimeout(() => {
+      this.router.navigate(['/employees']);
+    },1000 );
   }
 }

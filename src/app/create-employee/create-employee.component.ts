@@ -13,8 +13,7 @@ export class CreateEmployeeComponent implements OnInit {
   employee: Employee = new Employee();
   submitted = false;
 
-  constructor(private employeeService: EmployeeService,
-    private router: Router) { }
+  constructor(private employeeService: EmployeeService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -29,6 +28,7 @@ export class CreateEmployeeComponent implements OnInit {
       .subscribe(data => console.log(data), error => console.log(error));
     this.employee = new Employee();
     this.gotoList();
+    
   }
 
   onSubmit() {
@@ -37,6 +37,8 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/employees']);
+    setTimeout(() => {
+      this.router.navigate(['/employees']);
+    },1000 );
   }
 }
